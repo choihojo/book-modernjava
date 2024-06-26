@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.Function;
 
 /**
- * 이론적으로는 Collections.list(list, comparator)가 아니라 list.sort(comparator)를 수행하는 것이 적절하다.
+ * 이론적으로는 Collections.sort(list, comparator)가 아니라 list.sort(comparator)를 수행하는 것이 적절하다.
  * 하지만 자바 8이 등장하기 전까지는 이 문제를 해결한다는 것은 불가능에 가까웠다.
  * 인터페이스를 업데이트하려면 해당 인터페이스를 구현하는 모든 클래스도 업데이트해야 했기 때문이다.
  * 자바 8에서는 이러한 문제를 디폴트 메서드를 도입하여 해결하였다.
@@ -62,6 +62,8 @@ public class FilteringApples {
 
   public static List<Apple> filterGreenApples(List<Apple> inventory) {
     List<Apple> result = new ArrayList<>();
+//    result.sort()
+//    Collections.sort();
     for (Apple apple : inventory) {
       if (apple.getColor() == Color.GREEN) {
         result.add(apple);
