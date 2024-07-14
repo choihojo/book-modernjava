@@ -2,8 +2,6 @@ package ch16;
 
 import static ch16.Util.delay;
 import static ch16.Util.format;
-import static modernjavainaction.chap16.Util.delay;
-import static modernjavainaction.chap16.Util.format;
 
 public class Discount {
 
